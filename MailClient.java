@@ -37,7 +37,7 @@ public class MailClient
      */
     public void printNextMailItem()
     {
-        if (howManyMailItems(user) == 0) 
+        if (server.howManyMailItems(user) == 0) 
         {
             System.out.println (" Este usuario no tiene mensajes nuevos");
         }
@@ -50,7 +50,7 @@ public class MailClient
     }
 
     /**
-     * imprimir por pantalla si el usuario tiene mensajes
+     * envia el mensaje al receptor
      */
     public void sendMailItem(String receptor , String mensaje)
     {
