@@ -9,18 +9,18 @@
     // quien envia el mensaje
     private String from;
     // receptor del mensaje
-    private String for;
+    private String to;
     // mensaje
     private String message;
     /**
-      * Constructor que inicia las variables de MailCcilent
+      * Constructor que inicia las variables de MailItem
       */
-    public MailClient(String de, String para, String mensaje)
+    public MailItem(String de, String para, String mensaje)
      {
         // initialise instance variables
         x = 0;
         from = de;
-        for = para;
+        to = para;
         message = mensaje;
      }
      /**
@@ -35,7 +35,7 @@
      */
     public String getFor()
     {
-        return for;
+        return to;
     }
     /**
      * Método que devuelve la cadena almacenada en from
@@ -44,5 +44,6 @@
     {
         return message;
     }
+}
 
 
