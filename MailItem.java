@@ -10,15 +10,18 @@ public class MailItem
     private String to;
     // mensaje
     private String message;
+    // crea un asunto
+    private String subject;
     /**
      * Constructor que inicia las variables de MailItem
      */
-    public MailItem(String de, String para, String mensaje)
+    public MailItem(String from, String to, String message, String subject)
     {
         // initialise instance variables
-        from = de;
-        to = para;
-        message = mensaje;
+        this.from = from;
+        this.to = to;
+        this.message = message;
+        this.subject = subject;
     }
 
     /**
@@ -53,6 +56,7 @@ public class MailItem
         System.out.println("from: " + from);
         System.out.println("to: " + to);
         System.out.println("message: " + message);
+        System.out.println("subject: " + subject);
     }
 }
 

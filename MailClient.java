@@ -15,11 +15,11 @@ public class MailClient
     /**
      * Constructor for objects of class MailClient
      */
-    public MailClient(MailServer serverX ,String usuarioX )
+    public MailClient(MailServer server ,String usuario )
     {
         // initialise instance variables
-        server = serverX;
-        user = usuarioX ;
+        this.server = server ;
+        this.user = usuario ;
 
     }
 
@@ -37,24 +37,29 @@ public class MailClient
      */
     public void printNextMailItem()
     {
-        if (server.howManyMailItems(user) == 0) 
-        {
-            System.out.println (" Este usuario no tiene mensajes nuevos");
-        }
-        else 
-        {
-            MailItem newMail =  server.getNextMailItem( user );
-            newMail.printMail();
-
+        MailItem email = getNextMailItem();
+		if (email != null)
+		{
+			//Imprimimos los detalles del email
+			email.printMail();
+			
+			System.out.println("De: " + email.getFrom());
+			System.out.println("Destinatario: " + email.getTo());
+			System.out.println("Mensaje" + email.getMessage());
+		}
+		else 
+		{
+			//Avisamos de que no hay emails en el servidor
+			System.out.println("No hay correo nuevo");	
         }
     }
 
     /**
      * envia el mensaje al receptor
      */
-    public void sendMailItem(String receptor , String mensaje)
+    public void sendMailItem(String to , String message, String subject)
     {
-        MailItem email = new MailItem(user,receptor,mensaje);
+        MailItem email = new MailItem(user,to,message, subject);
         server.post(email);
     }
 
