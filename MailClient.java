@@ -24,14 +24,29 @@ public class MailClient
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * metodo que devuelve el ultimo mensaje de un usuario
      */
     public MailItem  getNextMailItem()
     {
         return server.getNextMailItem( user );
         
     }
+    /**
+     * 
+     */
+     public void printNextMailItem()
+     {
+         if (howManyMailsItems(user) == 0) 
+         {
+         system.out.println " Este usuario no tiene mensajes nuevos";
+        }
+         else 
+         {
+                MailItem newMAil =  server.getNextMailItem( user );
+                newMAil.printMAil();
+            
+            
+         }
+    
+
 }
