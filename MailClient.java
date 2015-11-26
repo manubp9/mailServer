@@ -20,7 +20,7 @@ public class MailClient
         // initialise instance variables
         server = serverX;
         user = usuarioX ;
-        
+
     }
 
     /**
@@ -29,24 +29,33 @@ public class MailClient
     public MailItem  getNextMailItem()
     {
         return server.getNextMailItem( user );
-        
+
     }
+
     /**
-     * 
+     * imprimir por pantalla si el usuario tiene mensajes
      */
-     public void printNextMailItem()
-     {
-         if (howManyMailsItems(user) == 0) 
-         {
-         system.out.println " Este usuario no tiene mensajes nuevos";
+    public void printNextMailItem()
+    {
+        if (howManyMailItems(user) == 0) 
+        {
+            System.out.println (" Este usuario no tiene mensajes nuevos");
         }
-         else 
-         {
-                MailItem newMAil =  server.getNextMailItem( user );
-                newMAil.printMAil();
-            
-            
-         }
-    
+        else 
+        {
+            MailItem newMail =  server.getNextMailItem( user );
+            newMail.printMail();
+
+        }
+    }
+
+    /**
+     * imprimir por pantalla si el usuario tiene mensajes
+     */
+    public void sendMailItem(String receptor , String mensaje)
+    {
+        MailItem email = new MailItem(user,receptor,mensaje);
+        server.post(email);
+    }
 
 }
