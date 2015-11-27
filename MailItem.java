@@ -12,6 +12,7 @@ public class MailItem
     private String message;
     // crea un asunto
     private String subject;
+    
     /**
      * Constructor que inicia las variables de MailItem
      */
