@@ -2,7 +2,9 @@
 
 Crea un nuevo proyecto llamado mi-mail-system en BlueJ.
 Crea 3 clases: MailItem, MailClient y MailServer.
-Copia el código de la clase MailServer que encontrarás en el archivo MailServer.java del proyecto mail-system de mi página de GitHub en tu clase MailServer. Puedes y debes echar un vistazo a los métodos disponibles de esa clase, en concreto a sus cabeceras y a sus comentarios previos (con eso nos basta, no nos interesa como es el código interno de cada método) ya que será necesario que los invoques para poder completar tu trabajo.
+Copia el código de la clase MailServer que encontrarás en el archivo MailServer.java del proyecto mail-system de mi página de GitHub en tu clase MailServer. 
+Puedes y debes echar un vistazo a los métodos disponibles de esa clase, en concreto a sus cabeceras y a sus comentarios previos 
+(con eso nos basta, no nos interesa como es el código interno de cada método) ya que será necesario que los invoques para poder completar tu trabajo.
 Codifica por ti mismo las otras dos clases de forma que:
 La clase MailItem:
 Disponga 3 atributos de tipo String llamados from, to y message.
@@ -16,13 +18,16 @@ Disponga de 2 atributos: uno de tipo MailServer llamado server
 Disponga de un constructor que permita crear un objeto MailClient inicializando sus atributos por medio de parámetros.
 Disponga de un método llamado getNextMailItem que recupere del servidor el siguiente correo (un objeto MailItem) que tenga el usuario y devuelva dicho objeto.
 Disponga de un método llamado printNextMailItem que recupere del
-servidor el siguiente correo (un objeto MailItem) que tenga el usuario e imprima por pantalla los datos de dicho mensaje. Si no hay ningun mensaje, que muestre un mensaje por pantalla informando de ello.
+servidor el siguiente correo (un objeto MailItem) que tenga el usuario e imprima por pantalla los datos de dicho mensaje. 
+Si no hay ningun mensaje, que muestre un mensaje por pantalla informando de ello.
 Disponga de un método llamado sendMailItem que reciba 2 parámetros (un String indicando para quién es el mensaje y otro String indicando el contenido del mensaje), 
 cree un email (objeto MailItem) basándose en la información de dichos parámetros y lo envíe al servidor asociado a ese cliente.
 Comprueba que funciona tal y como funcionaba el proyecto descargado en la actividad 0029.
 
 Intenta completar por ti mismo las clases que se piden (MailClient y MailItem) sin mirar la implementación que figura en el repositorio de GitHub.
 
-Esta actividad tiene un poco de dificultad a la hora de rescribir la clase MailClient por lo que no deberías preocuparte si no eres capaz de completarla. En ese caso, mira el código para esa clase que hay en mi repositorio e intenta entenderlo. En cualquier caso, la clase MailItem si que deberías ser capaz de realizarla tú solo.
+Esta actividad tiene un poco de dificultad a la hora de rescribir la clase MailClient por lo que no deberías preocuparte si no eres capaz de completarla. 
+En ese caso, mira el código para esa clase que hay en mi repositorio e intenta entenderlo. 
+En cualquier caso, la clase MailItem si que deberías ser capaz de realizarla tú solo.
 
 Cuando termines sube el código a Github e indica como respuesta de la actividad el enlace al último commit.
